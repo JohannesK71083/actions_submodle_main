@@ -1,0 +1,10 @@
+name: "Submodule Test"
+description: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: execute test
+      shell: cmd
+      run: |
+        tree /F /A ${{ github.action_path }}
