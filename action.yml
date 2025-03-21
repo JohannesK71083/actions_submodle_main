@@ -7,7 +7,7 @@ runs:
     - name: execute test
       shell: python
       run: |
-        from os import path, env
-        path = rf"{env['github.action_path']}\submodule\test.txt"
+        from os import path, environ
+        path = rf"{environ['github.action_path']}\submodule\test.txt"
         print(path)
         print(path.exists(path))
