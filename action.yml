@@ -1,0 +1,11 @@
+name: "Submodule Test"
+description: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: execute test
+      shell: python
+      run: |
+        from os import path, env
+        print(path.exists(rf"{env['github.action_path']}\submodule\test.txt"))
