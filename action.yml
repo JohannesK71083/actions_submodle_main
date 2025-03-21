@@ -10,6 +10,6 @@ runs:
         from os import path, environ
         path_str = rf"{environ['ACTION_PATH']}\submodule\test.txt"
         print(path_str)
-        print(path_str.exists(path))
+        print(path.exists(path_str))
       env:
         ACTION_PATH: $(( github.action_path ))
