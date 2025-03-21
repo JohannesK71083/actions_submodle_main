@@ -8,4 +8,6 @@ runs:
       shell: python
       run: |
         from os import path, env
-        print(path.exists(rf"{env['github.action_path']}\submodule\test.txt"))
+        path = rf"{env['github.action_path']}\submodule\test.txt"
+        print(path)
+        print(path.exists(path))
