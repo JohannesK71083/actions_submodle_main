@@ -8,8 +8,8 @@ runs:
       shell: python
       run: |
         from os import path, environ
-        path = rf"{environ['ACTION_PATH']}\submodule\test.txt"
-        print(path)
-        print(path.exists(path))
+        path_str = rf"{environ['ACTION_PATH']}\submodule\test.txt"
+        print(path_str)
+        print(path_str.exists(path))
       env:
         ACTION_PATH: $(( github.action_path ))
